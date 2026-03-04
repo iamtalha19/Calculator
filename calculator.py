@@ -38,7 +38,6 @@ st.title("Calculator")
 st.text_input(
     label="Calculator Display",
     label_visibility="collapsed",
-    value=st.session_state.math_equation,
     key="math_equation",
     on_change=calculate_result,
     placeholder="0"
