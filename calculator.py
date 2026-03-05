@@ -16,11 +16,7 @@ def calculate_result():
         # Use Python's eval to calculate string expression
         # Replace display symbols (if any) with math symbols
         expr = st.session_state.math_equation.replace('÷', '/').replace('×', '*')
-        
-        # If user typed '=' on the keyboard, remove it before evaluating
-        expr = expr.replace('=', '').strip()
-        
-        if expr == "":
+        if expr.strip() == "":
             return
         result = eval(expr)
         # Format: Remove .0 for integers
